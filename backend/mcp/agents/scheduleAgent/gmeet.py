@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
 import datetime
 
-async def summarize_meetings():
+def summarize_meetings(query: str = "") -> str:
     creds = Credentials.from_authorized_user_file("app/credentials/token.json")
     service = build("calendar", "v3", credentials=creds)
 
@@ -30,4 +30,4 @@ async def summarize_meetings():
         for e in meet_events
     ])
 
-    return text if text else 'No Google Meet meetings found.'
+    return text if text else 'No Google Meet meetings scheduled for today.'

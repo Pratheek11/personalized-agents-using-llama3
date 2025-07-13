@@ -20,7 +20,7 @@ const SummarizeToday = () => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setTodaySummary(data.answer);
+        setTodaySummary(data.response);
         setLoading(false);
       } catch (error) {
         setTodaySummary('Failed to fetch summary. Please try again later.');

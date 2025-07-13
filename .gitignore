@@ -1,0 +1,51 @@
+# === Python / FastAPI / LangChain ===
+__pycache__/
+*.py[cod]
+*.log
+*.sqlite3
+*.env
+.env.*
+*.db
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# LangChain cache (if used)
+.cache/
+langchain.db
+
+# Ollama model data (optional, local use only)
+.ollama/
+
+# Google credentials
+app/credentials/token.json
+app/credentials/credentials.json
+
+# VS Code / PyCharm IDE
+.vscode/
+.idea/
+
+# === Node / Electron Frontend ===
+electron-app/node_modules/
+electron-app/dist/
+electron-app/build/
+electron-app/.webpack/
+electron-app/.next/
+electron-app/out/
+
+# npm/yarn logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mac / OS junk
+.DS_Store
+Thumbs.db
+
+# Others
+*.swp
