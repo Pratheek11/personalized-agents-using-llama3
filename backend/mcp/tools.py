@@ -9,12 +9,10 @@ tools = [
         func=summarize_emails,
         coroutine=summarize_emails,
         description=(
-            "Use this tool **only** if the user specifically asks about:\n"
-            "- unread emails\n"
-            "- Gmail messages\n"
-            "- messages received\n\n"
-            "❌ Do not use this for greetings, general questions, or daily summaries.\n"
-            "✅ Return a clean **Markdown** summary of unread emails."
+            "WHEN TO USE: User asks specifically about emails, Gmail, messages, or unread items.\n"
+            "EXAMPLES: 'Check my emails', 'Any new messages?', 'Show unread emails'\n"
+            "RETURNS: Summary of unread emails from yesterday.\n"
+            "NOTE: Use this ONLY for email-specific queries, not general summaries."
         )
     ),
     Tool(
@@ -22,12 +20,10 @@ tools = [
         func=summarize_meetings,
         coroutine=summarize_meetings,
         description=(
-            "Use this tool **only** if the user specifically asks about:\n"
-            "- today's meetings\n"
-            "- today's calendar schedule\n"
-            "- upcoming events today\n\n"
-            "❌ Do not use this for greetings or general summaries.\n"
-            "✅ Respond in clear **Markdown** format."
+            "WHEN TO USE: User asks specifically about meetings, calendar, or today's schedule.\n"
+            "EXAMPLES: 'What meetings do I have?', 'Show my calendar', 'Any meetings today?'\n"
+            "RETURNS: List of Google Meet meetings scheduled for today.\n"
+            "NOTE: Use this ONLY for calendar/meeting-specific queries, not general summaries."
         )
     ),
     Tool(
@@ -35,11 +31,10 @@ tools = [
         func=summarize_today,
         coroutine=summarize_today,
         description=(
-            "Use this tool only if the user wants a full summary of the day, such as:\n"
-            "- 'What happened today?'\n"
-            "- 'Give me a daily update'\n"
-            "- 'Summarize today's emails and calendar'\n\n"
-            "✅ Combine email + calendar summaries into a single **Markdown** response."
+            "WHEN TO USE: User wants a complete daily overview or summary.\n"
+            "EXAMPLES: 'Summarize today', 'What happened today?', 'Daily update', 'Give me today's summary'\n"
+            "RETURNS: Combined summary of emails and calendar events.\n"
+            "NOTE: This tool combines both email and calendar data - use for comprehensive summaries."
         )
     ),
 ]
