@@ -47,13 +47,13 @@ npm install
 npm start
 ```
 
-## Local LLM
+## 🧠 Local LLM
 
 ```bash
 ollama run llama3
 ```
 
-## 🖥️ Backend (FastAPI)
+## 💾 Backend (FastAPI)
 
 ```bash
 cd backend

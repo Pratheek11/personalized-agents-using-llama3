@@ -8,7 +8,7 @@ llm = OllamaLLM(model="llama3")
 agent = initialize_agent(
     tools,
     llm,
-    agent_type=AgentType.STRUCTURED_CHAT_ZERO_SHOT_REACT_DESCRIPTION,
+    agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
     handle_parsing_errors=True,
     agent_kwargs={
         "system_message": system_message

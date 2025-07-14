@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
 import datetime
 
-def summarize_meetings(query: str = "") -> str:
+async def summarize_meetings(query: str = "") -> str:
     creds = Credentials.from_authorized_user_file("app/credentials/token.json")
     service = build("calendar", "v3", credentials=creds)
 

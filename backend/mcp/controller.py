@@ -14,4 +14,5 @@ async def handle_prompt(request: Request):
         result = await agent.ainvoke({"input": query})
         return {"response": result["output"]}
     except Exception as e:
+        print(f"Error processing query: {e}")
         return {"error": str(e)}
